@@ -1,0 +1,143 @@
+/* Container and Background */
+.testimonial-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 10%;
+  background: linear-gradient(to bottom right, #121212, #343434);
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonial-main-heading {
+  font-size: 5.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-family: Antony;
+  letter-spacing: 2px;
+}
+
+.testimonial-slogan {
+  font-size: 2.5rem;
+  color: #cccccc;
+  font-family: Antony;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+/* Testimonial Card */
+.testimonial-card-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.testimonial-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateX(0);
+}
+
+/* Smooth transition for fading out */
+.fading-out {
+  opacity: 0;
+  transform: translateX(-50px); /* Slide out smoothly to the left */
+}
+
+/* Smooth transition for fading in */
+.fading-in {
+  opacity: 1;
+  transform: translateX(0); /* Slide in smoothly */
+}
+
+/* Text Styles */
+.testimonial-text {
+  font-size: 1.6rem;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  line-height: 1.6;
+  font-family: 'Antony', sans-serif;
+}
+
+.testimonial-name {
+  font-size: 2.4rem;
+  color: #ff4040;
+  font-style: italic;
+  font-family: 'Antony', sans-serif;
+  margin: 15px 0;
+}
+
+.testimonial-company {
+  font-size: 1.4rem;
+  color: #ffff66;
+  font-style: italic;
+}
+
+/* Dots Styling */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  margin: 0 8px;
+  background-color: #949b9b;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: #ff4040;
+  transform: scale(1.3);
+}
+
+.dot:hover {
+  background-color: #ff4040;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .testimonial-main-heading {
+      font-size: 2rem;
+      text-align: center;
+  }
+
+  .testimonial-slogan {
+      font-size: 1rem;
+  }
+
+  .testimonial-card {
+      padding: 20px;
+  }
+
+  .testimonial-text {
+      font-size: 1.4rem;
+  }
+
+  .testimonial-name {
+      font-size: 1.8rem;
+  }
+
+  .testimonial-company {
+      font-size: 1.2rem;
+  }
+
+  .dot {
+      width: 12px;
+      height: 12px;
+  }
+}

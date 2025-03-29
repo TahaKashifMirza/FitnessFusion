@@ -1,0 +1,128 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c; /* Dark background */
+  }
+  
+  .membership-page {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  
+  .membership-heading {
+    font-size: 5rem;
+    font-family: antony;
+    margin-bottom: 1.5rem;
+    color: #fff; /* White text color for contrast */
+  }
+  
+  .membership-description {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    font-family: antony;
+    color: #ddd;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .membership-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  
+  .membership-card {
+    background-color: #2b2b2b; /* Darker card background */
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin-top: 6rem;
+    width: 450px; /* Increased width for larger cards */
+    box-shadow: 0 15px 20px rgba(248, 2, 2, 0.438);
+    transform-style: preserve-3d;
+    transition: transform 0.5s, box-shadow 0.5s;
+    cursor: pointer;
+    perspective: 1200px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .membership-card:hover {
+    transform: translateY(-15px) rotateY(15deg) scale(1.08);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  }
+  
+  .plan-name {
+    font-size: 4rem;
+    font-family: antony;
+    margin-bottom: 0.7rem;
+    color: #f5f5f5; /* Lighter text color for contrast */
+  }
+  
+  .plan-price {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: #fbff1e; /* Light blue color */
+  }
+  
+  .plan-features {
+    list-style: none;
+    padding: 0;
+    font-family: antony;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 2rem;
+    color: #cfcfcf; /* Light text color for features */
+  }
+  
+  .plan-features li {
+    padding: 0.5rem 0;
+  }
+  
+  .membership-button {
+    padding: 14px 30px;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* Make the text bolder */
+    color: #000000;
+    background: linear-gradient(45deg, #FFD700, #FF8C00); /* Gradient background */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  }
+  
+  .membership-button:hover {
+    transform: translateY(-8px) scale(1.05); /* Slightly larger on hover */
+    background: linear-gradient(45deg, #FFC300, #FF5733); /* Change gradient on hover */
+    box-shadow: 0px 8px 20px rgba(255, 140, 0, 0.8); /* Stronger shadow on hover */
+  }
+
+  .membership-button:active {
+    transform: translateY(0) scale(1); /* Button returns to original size on click */
+    box-shadow: 0px 4px 10px rgba(255, 140, 0, 0.5); /* Lighter shadow when active */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .membership-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .membership-card {
+      width: 95%;
+    }
+  
+    .membership-heading {
+      font-size: 2.5rem;
+    }
+  
+    .membership-description {
+      font-size: 1rem;
+    }
+  }
+  

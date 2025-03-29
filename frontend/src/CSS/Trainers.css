@@ -1,0 +1,228 @@
+/* Full-Screen Image with Headings */
+.full-screen-image {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/Images/trainermain.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  perspective: 1000px; /* Added for parallax effect */
+}
+
+.main-heading-trainer {
+  font-size: 9rem;
+  font-weight: bold;
+  font-family: 'Antony';
+  margin: 0;
+  animation: slideDown 1s ease-out;
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+  transform: translateZ(0);
+  transition: transform 0.5s ease-out;
+}
+
+.sub-heading-trainer {
+  font-size: 5rem;
+  margin-top: 0.5rem;
+  color: rgb(238, 255, 0);
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+  animation: slideUp 1s ease-out;
+  transform: translateZ(0);
+  transition: transform 0.5s ease-out;
+}
+
+/* Dark Gray Section */
+.trainers-section {
+  background-color: #333;
+  padding: 3rem 1rem;
+  text-align: center;
+  color: white;
+}
+
+.section-heading {
+  font-size: 6rem;
+  font-family: antony;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.section-description {
+  font-size: 1.8rem;
+  margin: 0 auto 2rem;
+  margin-bottom: 5rem;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Trainers card styles */
+.trainers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+}
+
+.trainer-card {
+  width: 400px;
+  border: 2px solid yellow;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.trainer-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.trainer-card:hover {
+  transform: translate(-10px, -10px);
+}
+
+.trainer-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.trainer-card.in-view .trainer-image {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.trainer-card:hover .trainer-image {
+  transform: scale(1.05);
+}
+
+.separator-line {
+  width: 50%;
+  margin: 10px auto;
+  border: 1px solid yellow;
+}
+
+/* Animations */
+@keyframes slideDown {
+  0% {
+      transform: translateY(-100%);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+      transform: translateY(100%);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.9) translateY(20px);
+  }
+  60% {
+    transform: scale(1.05) translateY(-10px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* For large screens */
+@media (max-width: 1200px) {
+  .main-heading-trainer {
+      font-size: 7rem;
+  }
+
+  .sub-heading-trainer {
+      font-size: 4rem;
+  }
+
+  .section-heading {
+      font-size: 5rem;
+  }
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+  .main-heading-trainer {
+      font-size: 5rem;
+  }
+
+  .sub-heading-trainer {
+      font-size: 3rem;
+  }
+
+  .section-heading {
+      font-size: 4rem;
+  }
+
+  .section-description {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+  }
+
+  .trainers-container {
+      gap: 50px;
+  }
+
+  .trainer-card {
+      width: 300px;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .main-heading-trainer {
+      font-size: 3.5rem;
+  }
+
+  .sub-heading-trainer {
+      font-size: 2.5rem;
+  }
+
+  .section-heading {
+      font-size: 3rem;
+  }
+
+  .section-description {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+  }
+
+  .trainers-container {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .trainer-card {
+      width: 90%;
+      margin: 0 auto;
+  }
+}

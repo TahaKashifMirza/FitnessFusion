@@ -1,0 +1,194 @@
+/* Footer Container */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3rem;
+    background-color: #111;
+    color: #fff;
+    position: relative;
+    background-image: url('/Images/footerimg.png'); 
+    background-size: cover;
+
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.footer-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer Columns */
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 1rem;
+}
+
+/* Logo Styling */
+.footer-logo {
+    width: 180px;
+    height: auto;
+}
+
+/* Headings */
+.footer-heading {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    position: relative;
+    color: #ffcc00;
+}
+
+/* Footer Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.footer-links li {
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.footer-links li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+}
+
+.footer-links a {
+    color: #fefff5;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffcc00;
+}
+
+/* FitnessFusion Info */
+.footer-slogan {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    color: #ffcc00;
+}
+
+.footer-description {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #fffafa;
+}
+
+/* Follow Us Section */
+.follow-us-heading {
+    font-size: 2.8rem;
+    margin-top: 2rem;
+    color: #ffcc00;
+}
+
+.social-icons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.9rem;
+}
+
+.social-icons a {
+    color: #ccc;
+    font-size: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffcc00;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        background-position: center;
+    }
+
+    .footer-column {
+        min-width: 100%;
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .footer-heading, .follow-us-heading {
+        font-size: 2.4rem;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+
+    .footer-links li {
+        padding-left: 0;
+    }
+
+    .footer-links li::before {
+        left: 42%;
+        transform: translate(-50%, -50%);
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-heading, .follow-us-heading {
+        font-size: 2rem;
+    }
+
+    .footer-links a {
+        font-size: 1.2rem;
+    }
+
+    .footer-links li::before{
+        left: 12rem;
+    }
+
+    .footer-description, .footer-slogan {
+        font-size: 1.3rem;
+    }
+
+    .social-icons a {
+        font-size: 1.8rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.9rem;
+    }
+}

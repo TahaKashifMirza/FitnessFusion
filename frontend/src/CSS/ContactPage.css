@@ -1,0 +1,233 @@
+.contact-page {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #1b1b1b; /* Dark background for contrast */
+    color: #fff; /* Ensuring text is readable */
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Full-Screen Image Section */
+.contact-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/Images/contactbg.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.6);
+}
+
+.contact-header-text h1 {
+    font-size: 6.5rem;
+    font-family: 'Antony';
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.contact-header-text p {
+    font-size: 3.5rem;
+    color: #ffd700;
+    font-family: 'Antony';
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin-top: 0.5rem;
+    text-shadow: 5px 1px 8px rgba(10, 20, 20, 0.5);
+}
+
+/* Main Heading */
+.main-heading {
+    text-align: center;
+    font-size: 5.9rem;
+    color: #ffd700;
+    font-family: 'Antony';
+    margin: 3rem 0;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+}
+
+/* Contact Form and Information Section */
+.contact-form-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4rem;
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+    padding: 3rem;
+    background-color: #2d2d2d;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    color: #ddd;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.form-h1{
+ font-size: 3.5rem;
+ font-family: antony;
+ text-align: center;
+}
+
+.form-p{
+    font-size: 2rem;
+    font-family: antony;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.input-field {
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+    background-color: #d4d0d0;
+    color: #2c2c2c;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.3s;
+}
+
+.input-field:focus {
+    border-color: #ffd700;
+    outline: none;
+}
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 1.8rem;
+    background-color: #ffd700;
+    color: #1b1b1b;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 35%;
+    font-size: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    font-family: antony;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2rem;
+    padding: 1.8rem 0;
+    color: #ffd700;
+}
+
+.info-item:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.info-item svg {
+    margin-left: 10rem;
+    font-size:4rem;
+    color: #ffd700;
+}
+
+.info-item svg:hover {
+  color: red;
+}
+
+/* Full-Screen Location Section */
+.location-section {
+    width: 100%;
+    height: 50vh;
+    background: url('/Images/location.jpg') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgb(252, 11, 3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contact-form-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 3rem 1rem;
+    }
+
+    .contact-form, .contact-info {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 3rem;
+    }
+
+    .contact-header-text h1 {
+        font-size: 3rem;
+    }
+
+    .contact-header-text p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-heading {
+        font-size: 2.5rem;
+    }
+
+    .contact-form, .contact-info {
+        width: 90%;
+    }
+
+    .contact-header-text h1 {
+        font-size: 2rem;
+    }
+
+    .contact-header-text p {
+        font-size: 1rem;
+    }
+
+    .form-h1{
+        font-size: 1.8rem;
+       }
+       
+       .form-p{
+           font-size: 1.2rem;
+       }
+
+    .info-item {
+        font-size: 1.2rem;
+    }
+
+    .info-item svg {
+        font-size: 1.5rem;
+    }
+}

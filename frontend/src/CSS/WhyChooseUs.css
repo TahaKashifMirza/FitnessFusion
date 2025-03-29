@@ -1,0 +1,139 @@
+/* src/pages/WhyChooseUs.css */
+.why-choose-us {
+  background-color: #1a1a1a; /* Dark background color */
+  color: #ffffff; /* Light text color */
+  text-align: center;
+  padding: 2rem;
+}
+
+.main-heading {
+  margin-bottom: 8rem;
+  font-family: antony;
+  font-size: 4.8rem;
+  opacity: 0;
+  animation: fadeInTop 1.5s ease-in-out forwards; /* Heading load from top */
+  transition: opacity 0.5s ease-out;
+}
+
+.globe-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.globe-container {
+  width: 300px; /* Adjusted width */
+  text-align: center;
+  position: relative;
+  opacity: 0;
+  transform: translateY(50px); /* Initial position for scroll animation */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.globe-icon {
+  position: relative;
+  background-color: #cf3e3e; /* Background circle color */
+  border-radius: 50%;
+  width: 170px; /* Increased size */
+  height: 170px; /* Increased size */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem; /* Increased size for Font Awesome icon */
+  color: #f0f0f0; /* Globe color */
+}
+
+.number {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  background-color: #444;
+  padding: 5px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.globe-heading {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+}
+
+.globe-description {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+  color: #cccccc; /* Light gray for the description */
+}
+
+/* Animation Keyframes */
+@keyframes fadeInTop {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Pop in animation for scroll effect */
+@keyframes popIn {
+  0% {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .main-heading {
+      font-size: 3.5rem;
+  }
+  .globe-container {
+      width: 200px; /* Adjusted width for smaller screens */
+  }
+  .globe-icon {
+      width: 140px;
+      height: 140px;
+      font-size: 3rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+      font-size: 3rem;
+  }
+  .globe-container {
+      width: 180px; /* Adjusted width for smaller screens */
+  }
+  .globe-icon {
+      width: 120px;
+      height: 120px;
+      font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Scroll Animations */
+@keyframes slideUp {
+  from {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.scroll-in-view {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slideUp 0.8s ease-out forwards; /* Smooth slide up animation */
+}

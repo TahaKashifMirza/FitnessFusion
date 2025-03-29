@@ -1,0 +1,256 @@
+/* Dark background container styling */
+.about-container {
+    padding: 40px;
+    margin: auto;
+    background-color: #1a1a1a; 
+    color: #f0f0f0; 
+    font-family: 'Lato', sans-serif;
+    overflow: hidden; 
+}
+
+/* Animation Keyframes */
+@keyframes slideFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Initial state for animations */
+.animated {
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+
+/* Apply animations when visible */
+.animated.visible {
+    opacity: 1;
+}
+
+.animated-heading.visible {
+    animation: slideFromTop 1s ease-out;
+}
+
+.animated-slogan.visible,
+.animated-description.visible,
+.animated-subheading.visible {
+    animation: slideFromTop 1s ease-out;
+}
+
+.animated-section.visible:nth-child(even) .animated-image,
+.animated-section.visible:nth-child(even) .animated-text {
+    animation: slideFromRight 1s ease-out;
+}
+
+.animated-section.visible:nth-child(odd) .animated-image,
+.animated-section.visible:nth-child(odd) .animated-text {
+    animation: slideFromLeft 1s ease-out;
+}
+
+/* Main heading styling */
+.about-main-heading {
+    font-size: 5.8rem;
+    font-family: antony;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+}
+
+.highlight {
+    font-family: antony;
+    color: yellow;
+}
+
+.about-slogan {
+    font-size: 2rem;
+    text-align: center;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* Sub-heading and description styling */
+.sub-heading {
+    margin-top: 7rem;
+    font-size: 5.5rem;
+    font-family: antony;
+    text-align: center;
+    margin-bottom: 20px;
+    color: yellow;
+}
+
+.description {
+    font-size: 1.8rem;
+    font-family: antony;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #c0c0c0;
+    line-height: 1.8;
+}
+
+/* Section styling */
+.section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.section .about-image {
+    margin-top: 5rem;
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 0 10px 10px yellow;
+}
+
+.section.reverse {
+    flex-direction: row-reverse;
+}
+
+.section .text-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-content h3 {
+    font-size: 6rem;
+    font-family: antony;
+    color: yellow;
+    margin-bottom: 15px;
+}
+
+.text-content p {
+    font-size: 2rem;
+    font-family: antony;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .about-main-heading {
+        font-size: 3rem;
+    }
+
+    .about-slogan {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .sub-heading {
+        font-size: 3rem;
+        margin-top: 5rem;
+    }
+
+    .description {
+        font-size: 1.4rem;
+        margin-bottom: 30px;
+    }
+
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section .about-image {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .text-content {
+        padding: 10px;
+    }
+
+    .text-content h3 {
+        font-size: 3rem;
+    }
+
+    .text-content p {
+        font-size: 1.4rem;
+    }
+}
+
+/* Tablets and small desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .about-main-heading {
+        font-size: 4rem;
+    }
+
+    .about-slogan {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .sub-heading {
+        font-size: 4.5rem;
+        margin-top: 6rem;
+    }
+
+    .description {
+        font-size: 1.6rem;
+        margin-bottom: 35px;
+    }
+
+    .section {
+        gap: 15px;
+    }
+
+    .section .about-image {
+        width: 50%;
+    }
+
+    .text-content h3 {
+        font-size: 4rem;
+    }
+
+    .text-content p {
+        font-size: 1.6rem;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+    .about-main-heading {
+        font-size: 5.8rem;
+    }
+
+    .sub-heading {
+        font-size: 5.5rem;
+    }
+
+    .text-content h3 {
+        font-size: 6rem;
+    }
+}
